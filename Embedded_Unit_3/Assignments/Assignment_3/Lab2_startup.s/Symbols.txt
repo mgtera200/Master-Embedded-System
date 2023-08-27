@@ -1,0 +1,14 @@
+$ arm-none-eabi-nm.exe main.o
+00000000 T main
+00000000 D R_ODR
+----------------------------------------
+$ arm-none-eabi-nm.exe startup.o
+00000000 t _reset
+         U main
+00000006 t Vector_handler
+----------------------------------------
+$ arm-none-eabi-nm.exe learn-in-depth.elf
+080000cc t _reset
+08000050 T main
+080000d4 D R_ODR
+080000d2 t Vector_handler

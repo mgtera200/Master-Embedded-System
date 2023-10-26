@@ -13,6 +13,8 @@
 void init_pins()
 {
 DDRC = 0b11111100;
+DDRD = 0b11111000;
+PORTD = 0;
 }
 /*void delay()
 {
@@ -23,11 +25,11 @@ int main(void)
 {
 	init_pins();
 	
-	int i,j;
+	//int i,j;
 	
     while(1)
     {
-		for(i=0; i<10; i++)
+		/*for(i=0; i<10; i++)
 		{
 			for(j=0; j<10; j++)
 			{
@@ -37,6 +39,15 @@ int main(void)
 				_delay_ms(1000);
 
 			}
+		}*/
+		if(((PIND & (1<<0))>>0)== 1)
+		{
+			PORTD |= (1<<4);
 		}
+		if(((PIND & (1<<0))>>0)== 0)
+		{
+			PORTD &= ~(1<<4);
+		}
+
     }
 }

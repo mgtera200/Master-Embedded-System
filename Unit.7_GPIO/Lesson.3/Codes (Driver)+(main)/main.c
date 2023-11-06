@@ -49,9 +49,9 @@ void GPIO_init(void)
 	//00: Input mode (reset state)
 	//01: Floating input (reset state)
 	Pin_Config_t PA_13_input;
-	PA_1_input.input=1;
-	PA_1_input.mode= Input_floating;
-	PA_1_input.Pin_Num=13;
+	PA_13_input.input=1;
+	PA_13_input.mode= Input_floating;
+	PA_13_input.Pin_Num=13;
 	MCAL_GPIO_Init(GPIOA, &PA_13_input);
 
 

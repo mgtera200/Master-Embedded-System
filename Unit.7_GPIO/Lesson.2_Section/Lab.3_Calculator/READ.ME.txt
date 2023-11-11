@@ -1,0 +1,2 @@
+This lab i used the lcd driver and keypad driver i made in the first 2 labs
+to make a calculator :) 

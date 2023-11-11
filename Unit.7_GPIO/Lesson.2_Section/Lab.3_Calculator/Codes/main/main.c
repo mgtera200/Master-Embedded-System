@@ -26,7 +26,8 @@ int main(){
 			case 'A':
 				break;
 				
-			case '*':{
+			case '*':{							/* When we press * its sets flag and copy the left side number(num1) to num2 array
+												   then we reset num1 to zero to be ready to hold the right side number */
 				LCD_Send_Character('*');
 				flag=2;
 				strcpy(num2,num1);
@@ -36,7 +37,8 @@ int main(){
 				count =0;
 				break;
 			}
-			case '/':{
+			case '/':{							/* When we press / its sets flag and copy the left side number(num1) to num2 array
+												   then we reset num1 to zero to be ready to hold the right side number */
 				LCD_Send_Character('/');
 				flag=3;
 				strcpy(num2,num1);
@@ -47,7 +49,8 @@ int main(){
 				break;
 			}
 			
-			case '-':{
+			case '-':{							/* When we press - its sets flag and copy the left side number(num1) to num2 array
+												   then we reset num1 to zero to be ready to hold the right side number */
 				LCD_Send_Character('-');
 				flag=4;
 				strcpy(num2,num1);
@@ -59,7 +62,8 @@ int main(){
 			}
 			
 			
-			case '+':{
+			case '+':{							/* When we press / its sets flag and copy the left side number(num1) to num2 array
+												 then we reset num1 to zero to be ready to hold the right side number */
 				LCD_Send_Character('+');
 				flag=1;
 				strcpy(num2,num1);
@@ -69,7 +73,8 @@ int main(){
 				count =0;
 				break;
 				}
-			case '=':{
+			case '=':{							/* When we press = it prints " = " then check which operation we want to make
+												   depending on the flag then reset the flag to be ready for the next operation */
 				LCD_Send_Character('=');
 				if(flag==1){
 					sum= atoi(num1)+atoi(num2);
@@ -98,7 +103,8 @@ int main(){
 				break;
 			}
 				
-			case '?':
+			case '?':							/* When we press on\off its clears the screen and reset num1 and num2 and count to zero
+												   to be ready for the next operation */
 			{
 				LCD_Clear_Screen();	
 				for(i=0; i<count; i++){

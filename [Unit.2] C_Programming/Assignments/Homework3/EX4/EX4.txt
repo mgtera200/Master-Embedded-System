@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main(){
+	int mat[50];
+int i;
+int n;
+int ins;
+int loc;
+printf("Enter no of elements:");
+fflush(stdout);
+fflush(stdin);
+scanf("%d",&n);
+for(i=0; i<n; i++)
+{
+	printf("%d\t",i+1);
+	fflush(stdout);
+	fflush(stdin);
+	mat[i]=i+1;
+}
+printf("\nEnter the elements to be inserted:");
+fflush(stdout);
+fflush(stdin);
+scanf("%d",&ins);
+printf("\nEnter the location:");
+fflush(stdout);
+fflush(stdin);
+scanf("%d",&loc);
+for(i=n; i>=loc; i--)
+{
+	mat[i]=mat[i-1];
+}
+n++;
+mat[loc-1]=ins;
+for(i=0; i<n; i++)
+{
+	printf("%d\t",mat[i]);
+}
+}

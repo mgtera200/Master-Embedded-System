@@ -1,0 +1,36 @@
+$ arm-none-eabi-nm main.o
+00000000 T main
+00000000 D R_ODR
+----------------------------------------
+$ arm-none-eabi-nm.exe startup.o
+         U _E_BSS
+         U _E_DATA
+         U _E_TEXT
+         U _S_BSS
+         U _S_DATA
+00000000 W Bus_fault_Handler
+00000000 T Default_Hanlder
+00000000 W H_fault_Handler
+         U main
+00000000 W MM_Fault_Handler
+00000000 W NMI_Handler
+0000000c T Reset_Handler
+00000000 W Usage_Fault_Handler
+00000000 D vectors
+-------------------------------------------
+$ arm-none-eabi-nm.exe learn-in-depth.elf
+20000004 D _E_BSS
+20000004 D _E_DATA
+08000130 T _E_TEXT
+20000004 D _S_BSS
+20000000 D _S_DATA
+0800001c W Bus_fault_Handler
+0800001c T Default_Hanlder
+0800001c W H_fault_Handler
+080000b4 T main
+0800001c W MM_Fault_Handler
+0800001c W NMI_Handler
+20000000 D R_ODR
+08000028 T Reset_Handler
+0800001c W Usage_Fault_Handler
+08000000 T vectors

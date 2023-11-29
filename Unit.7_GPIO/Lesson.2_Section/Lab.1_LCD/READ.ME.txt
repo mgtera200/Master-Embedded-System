@@ -1,2 +1,0 @@
-This lab i learned to drive the LCD and write
-on it strings and numbers as shown in the simulation video :)

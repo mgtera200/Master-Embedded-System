@@ -1,2 +1,0 @@
-This task is to drive 7 seg module
-to count from 0:0 to 9:9

@@ -1,0 +1,16 @@
+I2C_DRIVER.c:37:6:I2C_GenerateSTART	16	static
+I2C_DRIVER.c:65:12:I2C_GetFlagStatus	32	static
+I2C_DRIVER.c:200:6:I2C_SendAddress	16	static
+I2C_DRIVER.c:223:6:I2C_AcknowledgeConfig	24	static
+I2C_DRIVER.c:243:6:I2C_GenerateSTOP	16	static
+I2C_DRIVER.c:284:6:MCAL_I2C_Init	40	static
+I2C_DRIVER.c:403:6:MCAL_I2C_DInit	16	static
+I2C_DRIVER.c:437:6:MCAL_I2C_GPIO_Set_Pins	32	static
+I2C_DRIVER.c:495:6:MCAL_I2C_Master_TX	32	static
+I2C_DRIVER.c:554:6:MCAL_I2C_Master_RX	32	static
+I2C_DRIVER.c:623:6:MCAL_I2C_SlaveSendData	16	static
+I2C_DRIVER.c:638:9:MCAL_I2C_SlaveReceiveData	16	static
+I2C_DRIVER.c:654:6:I2C1_ER_IRQHandler	4	static
+I2C_DRIVER.c:660:6:I2C1_EV_IRQHandler	4	static
+I2C_DRIVER.c:665:6:I2C2_ER_IRQHandler	4	static
+I2C_DRIVER.c:671:6:I2C2_EV_IRQHandler	4	static

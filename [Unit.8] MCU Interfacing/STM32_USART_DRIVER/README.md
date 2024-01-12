@@ -1,0 +1,1 @@
+I made my own USART driver and used it to send and receive with polling and with interrupts

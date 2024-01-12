@@ -1,0 +1,5 @@
+TERA_RTOS_FIFO.c:23:15:FIFO_init	24	static
+TERA_RTOS_FIFO.c:40:15:FIFO_enqueue	16	static
+TERA_RTOS_FIFO.c:70:15:FIFO_dequeue	16	static
+TERA_RTOS_FIFO.c:98:15:FIFO_is_full	16	static
+TERA_RTOS_FIFO.c:110:6:FIFO_print	16	static

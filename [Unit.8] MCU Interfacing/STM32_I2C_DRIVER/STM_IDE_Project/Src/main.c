@@ -33,69 +33,7 @@
 #include "SPI_DRIVER.h"
 #include "I2C_DRIVER.h"
 #include "I2C_Slave_EEPROM.h"
-//
-//uint16_t ch;
-//Pin_Config_t Pincfg;
-//
-//
-//
-//
-//
-//void wait_ms(uint32_t time){
-//	uint32_t i,j;
-//	for(i=0; i<time; i++)
-//		for(j=0; j<255; j++);
-//}
-//
-//
-//void Usart_callback(interrupts_Bits * IRQ){
-//
-//#ifdef MASTER
-//
-//	if(IRQ->RX_Interrupt)
-//	{
-//		//RX ISR
-//		MCAL_USART_ReceiveChar(USART1, &ch);
-//		MCAL_USART_SendChar(USART1, &ch);
-//		//spi
-//		MCAL_GPIO_WritePin(GPIOA, 4, 0);
-//		MCAL_SPI_TX_RX(SPI1, &ch);
-//		MCAL_GPIO_WritePin(GPIOA, 4, 1);
-//	}
-//#endif
-//
-//	if(IRQ->TX_Interrupt)
-//	{
-//		//TX ISR
-//	}
-//	if(IRQ->TC_Interrupt){
-//		//TC ISR
-//	}
-//}
-//
-//
-//
-//
-//
-//void SPI_callback(Interrupt_flags_bits_t * IRQ){
-//
-//#ifdef SLAVE
-//	if(IRQ->Receive_buffer_not_empty_flag)
-//	{
-//		ch=0xf;
-//		MCAL_SPI_TX_RX(SPI1, &ch);
-//		MCAL_USART_SendChar(USART1, &ch);
-//
-//	}
-//#endif
-//
-//	//	if(IRQ->Transmit_buffer_empty_flag)
-//	//	{
-//	//
-//	//	}
-//
-//}
-//
+
  int main(void){
 	//
 	//
@@ -103,71 +41,7 @@
 	GPIOA_CLOCK_EN();
 	GPIOB_CLOCK_EN();
 	AFIO_CLOCK_EN();
-	//	USART1_CLOCK_EN();
-	//	SPI1_CLOCK_EN();
-	//
-	//	USART_Config_t UART_CNFG_s;
-	//	UART_CNFG_s.Async_EN = Enable;
-	//	UART_CNFG_s.Async_Config_s.Baud_Rate = 115200;
-	//	UART_CNFG_s.Async_Config_s.Stop_Bits = Stop_1;
-	//	UART_CNFG_s.Async_Config_s.Word_Length =Eight_bits;
-	//	UART_CNFG_s.interrupts_CNFG.RX_Interrupt_Enable_Or_Disable = Enable;
-	//	UART_CNFG_s.interrupts_CNFG.TX_Interrupt_Enable_Or_Disable = Disable;
-	//	UART_CNFG_s.interrupts_CNFG.TC_Interrupt_Enable_Or_Disable = Disable;
-	//	UART_CNFG_s.CallBack_FN = Usart_callback;
-	//	MCAL_USART_Init(USART1, &UART_CNFG_s);
-	//
-	//	MCAL_USART_GPIO_Pins_Config(USART1);
-	//
-	//	SPI_Config_t spi_cnfg;
-	//	spi_cnfg.SPI_MODES =SPI_COMM_MODE_2LINES_TX_RX;
-	//	spi_cnfg.data_frame =data_8_bits;
-	//	spi_cnfg.clock_phase= First_ck_transition_first_data;
-	//	spi_cnfg.clock_polarity =Clock_high_when_idle;
-	//	spi_cnfg.data_frame = MSB_transmitted_first;
-	//	spi_cnfg.Baud_rate_control = CLK_DIVIDED_8;
-	//
-	//#ifdef MASTER
-	//	spi_cnfg.Tx_buffer_empty_interrupt = Interrupt_Disable;
-	//	spi_cnfg.RX_buffer_not_empty_interrupt = Interrupt_Disable;
-	//	spi_cnfg.MASTER_OR_SLAVE = Master;
-	//	spi_cnfg.CallBack_PTR =NULL;
-	//	spi_cnfg.NSS_Management =SPI_NSS_SOFTWARE_INTERNAL_SS_SET;
-	//
-	//	//config PA4
-	//	Pincfg.Pin_Num=4;
-	//	Pincfg.mode =Output_ALF_Push_pull;
-	//	Pincfg.Speed_Output=speed_10;
-	//	MCAL_GPIO_Init(GPIOA, &Pincfg);
-	//
-	//	MCAL_GPIO_WritePin(GPIOA, 4, 1);
-	//#endif
-	//
-	//#ifdef SLAVE
-	//	spi_cnfg.RX_buffer_not_empty_interrupt = Interrupt_Enable;
-	//	spi_cnfg.Tx_buffer_empty_interrupt = Interrupt_Disable;
-	//	spi_cnfg.MASTER_OR_SLAVE = Slave;
-	//	spi_cnfg.NSS_Management =SPI_NSS_HARDWARE_SLAVE;
-	//	spi_cnfg.CallBack_PTR =SPI_callback;
-	//
-	//#endif
-	//
-	//	MCAL_SPI_Init(SPI1, &spi_cnfg);
-	//	MCAL_SPI_GPIO_PINS_CONFIG(SPI1);
 
-
-
-
-	//#ifdef MASTER
-	//
-	//	Pin_Config_t Pin_CNFG;
-	//	Pin_CNFG.Pin_Num = 4;
-	//	Pin_CNFG.Speed_Output = speed_10;
-	//	Pin_CNFG.mode = Output_Push_pull;
-	//	MCAL_GPIO_Init(GPIOA, &Pin_CNFG);
-	//
-	//	MCAL_GPIO_WritePin(GPIOA, 4, 1);
-	//#endif
 
 	//TEST CASE 1
 	unsigned char ch1 []= {0x1,0x2,0x3,0x4,0x5,0x6,0x7};
@@ -193,12 +67,7 @@
 	while(1)
 	{
 
-		//				MCAL_USART_RecieveChar(USART1, &buff);
-		//				MCAL_USART_SendChar(USART1, &buff);
 
 	}
 
 }
-
-
-

@@ -6,7 +6,7 @@
 <img align="center" alt="Coding" width="300" src="https://github.com/mgtera200/Master-Embedded-System/blob/main/%5BUnit.4.2%5D%20System.Architecting/gif2.gif" style="display:inline;">
 
 
-<p align="center">Good to see you ^_^</p>
+<p align="center">It's a pleasure to have you here ^_^</p>
 
 
 

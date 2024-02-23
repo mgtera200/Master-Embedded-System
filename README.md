@@ -2,7 +2,7 @@
 
 
 <div style="text-align: center;">
-    <div style="display: inline-block; margin-left: 20px;">
+    <div style="display: inline-block; margin-left: 30000px;">
         <img alt="Coding" width="350" src="https://github.com/mgtera200/Master-Embedded-System/blob/main/%5BUnit.4.2%5D%20System.Architecting/gif2.gif">
     </div>
 </div>

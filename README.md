@@ -7,7 +7,7 @@
 
 
 
-<p align="center">Just a passionate Programmer</p>
+align="center">**Just** a passionate Programmer
 
 
 

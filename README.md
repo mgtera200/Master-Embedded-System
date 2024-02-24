@@ -32,7 +32,7 @@ This repository is structured into distinct units, each signifying a dedicated l
 
 ## Final Outputs
 
-+ **Drivers:**
++ ### Drivers:
 
 	* STM32F103C6
 		1. GPIO
@@ -41,4 +41,4 @@ This repository is structured into distinct units, each signifying a dedicated l
 		4. SPI
 		5. I2C
 
-+ **ATmega32:**
+	* ATmega32:

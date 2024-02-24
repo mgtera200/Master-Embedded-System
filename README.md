@@ -1,7 +1,7 @@
 <img align="left" src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" width="20%" height="300" style="display:inline;"><img align="right" src="https://user-images.githubusercontent.com/65187002/144930161-2f783401-8d27-4fdf-a2f7-cc0ba32f1f1f.gif" width="20%" height="300" style="display:inline;">
 
 <p align="center">Mostafa Tera</p>
-<p align="center">💻 Embedded Software Engineer 💻</p>	
+<p align="center">◼️ Embedded Software Engineer ◼️</p>	
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif">

@@ -1,0 +1,8 @@
+main.c:52:5:main	64	static
+main.c:264:6:RFID_CARD_Enter_CallBack	16	static
+main.c:271:6:RFID_CARD_EXIT_CallBack	16	static
+main.c:280:6:LCD_Welcome	8	static
+main.c:293:6:LCD_Display_Empty_Slots	8	static
+main.c:303:6:LEDs_Init	24	static
+main.c:327:6:PIRs_Iint	24	static
+main.c:345:6:Store_IDs_From_Admin	16	static

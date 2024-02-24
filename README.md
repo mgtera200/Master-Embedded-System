@@ -30,11 +30,16 @@ This repository is structured into distinct units, each signifying a dedicated l
 
 ---
 
->Projects
->
->>Project 1
-bla bla
->>Project 2
->>bla bla
->>Project 3
->>Project 4
+## Final Outputs
+
+### Drivers:
+
+#### STM32F103C6
+
+- GPIO
+- EXTI
+- USART
+- SPI
+- I2C
+
+#### ATmega32

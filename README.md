@@ -21,7 +21,7 @@
 
 ---
 
-##### Description:
+#### Description:
 
 - This repository is organized into units, each representing a dedicated learning phase.
 - Within each unit, I have acquired new knowledge and skills, documented through practical laboratory exercises.

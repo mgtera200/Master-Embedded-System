@@ -21,12 +21,10 @@
 
 ---
 
-### <span style="color:red">Heading Description:</span>
+# <span style="color:red">Description:</span>
 
 This repository is organized into units, each representing a dedicated learning phase.
-
 Within each unit, I have acquired new knowledge and skills, documented through practical laboratory exercises.
-
 These labs serve to showcase my progression and include the relevant Drivers and Simualtion results.
 
 ---

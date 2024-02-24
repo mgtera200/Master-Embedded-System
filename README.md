@@ -1,4 +1,7 @@
-<img align="center" alt="tera" width="400" src="https://user-images.githubusercontent.com/74038190/212748830-4c709398-a386-4761-84d7-9e10b98fbe6e.gif" style="display:inline;">
+<p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/74038190/212748830-4c709398-a386-4761-84d7-9e10b98fbe6e.gif">
+</p>
+
 
 
 <img align="center" alt="Coding" width="300" src="https://github.com/mgtera200/Master-Embedded-System/blob/main/%5BUnit.4.2%5D%20System.Architecting/gif2.gif" style="display:inline;">

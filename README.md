@@ -32,13 +32,13 @@ This repository is structured into distinct units, each signifying a dedicated l
 
 ## Final Outputs
 
-+ ### Drivers:
++ ## Drivers:
 
-	* STM32F103C6
+	* **STM32F103C6:**
 		1. GPIO
 		2. EXTI
 		3. USART
 		4. SPI
 		5. I2C
 
-	* ATmega32:
+	* **ATmega32**:

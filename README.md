@@ -23,6 +23,6 @@
 
 ## Description:
 
-This repository is organized into units, each representing a dedicated learning phase.	Within each unit, I have acquired new knowledge and skills, documented through practical laboratory exercises.	These labs serve to showcase my progression and include the relevant Drivers and Simualtion results.
+This repository is structured into distinct units, each signifying a dedicated learning phase. Within each unit, I have acquired new knowledge and skills, documented through practical laboratory exercises and projects. These labs and projects serve to showcase my progression and encompass the relevant Drivers and Simulation results.
 
 ---

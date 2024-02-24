@@ -1,64 +1,76 @@
 /*
- * lcd.h
+ * LCD.h
  *
- * Created: 11/10/2023 1:40:56 AM
- *  Author: Dell
- */ 
+ * ENG.TERA
+ */
 
 
 #ifndef LCD_H_
 #define LCD_H_
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdio.h>
 #include "GPIO_DRIVER.h"
 #include "STM32F103x8.h"
-#define F_CPU 1000000UL
+#define GPIO_PIN_SET 1
+#define GPIO_PIN_RESET 0
+#define Read_Bit(reg,index)		((reg & 1<<index)>>index)
 
+/*=========Configurations============*/
+//#define Eight_Bit_MODE
+#define FOUR_Bit_MODE
 
+//#define LCD1_DATA 	GPIOB->ODR
+#define LCD1_PORT	GPIOB
+//#define LCD2_DATA 	GPIOA->
+#define LCD2_PORT	GPIOA
 
-#define LCD_CTRL GPIOA
-#define RS_SWITCH 8
-#define RW_SWITCH 9
-#define EN_SWITCH 10
-#define DATA_SHIFT         4
+#define RS1 		11
+#define EN1 		10
+#define RS2 		5
+#define EN2 		6
 
-// Hexadecimal instructions to be written to the instruction register
-#define LCD_FUNCTION_8BIT_2LINES     (0x38)
-#define LCD_FUNCTION_4BIT_2LINES     (0x28)
-#define LCD_MOVE_DISP_RIGHT          (0x1C)
-#define LCD_MOVE_DISP_LEFT           (0x18)
-#define LCD_MOVE_CURSOR_RIGHT        (0x14)
-#define LCD_MOVE_CURSOR_LEFT         (0x10)
-#define LCD_DISP_OFF                 (0x08)
-#define LCD_DISP_ON_CURSOR           (0x0E)
-#define LCD_DISP_ON_CURSOR_BLINK     (0x0F)
-#define LCD_DISP_ON_BLINK            (0x0D)
-#define LCD_DISP_ON                  (0x0C)
-#define LCD_ENTRY_DEC                (0x04)
-#define LCD_ENTRY_DEC_SHIFT          (0x05)
-#define LCD_ENTRY_INC                (0x06)
-#define LCD_ENTRY_INC_SHIFT          (0x07)
-#define LCD_BEGIN_AT_FIRST_ROW       (0x80)
-#define LCD_BEGIN_AT_SECOND_ROW      (0xC0)
-#define LCD_CLEAR                    (0x01)
-#define LCD_ENTRY_MODE               (0x06)
+#ifdef Eight_Bit_MODE
+#define D0			0
+#define D1			1
+#define D2			2
+#define D3			3
+#endif
 
+#define D4			12
+#define D5			13
+#define D6			14
+#define D7			15
+/*==================================*/
+#define ADMIN_LCD 0
+#define ENTRY_LCD 1
+#define LCD_8bit_1Line        0x30
+#define LCD_8bit_4Line        0x38
+#define LCD_4bit_1_Line       0x20
+#define LCD_4bit_4_Line       0x28
+#define LCD_Entry_Mode        0x06
+#define LCD_Display_off_Cursor_off  0x08
+#define LCD_Display_Cursor_On     0x0E
+#define LCD_Display_Cursor_Off    0x0C
+#define LCD_Display_Cursor_Blinking  0x0F
+#define LCD_Shift_Entire_Display_Left 0x18
+#define LCD_Shift_Entire_Display_Right 0x1C
+#define LCD_Move_Cursor_Left_By_one_Character   0x10
+#define LCD_Cursor_Right_By_One_Character    0x14
+#define LCD_Clear_Display                    0x01
+#define LCD_Start_At_Beginning_Of_First_Line 0x80
+#define LCD_Start_At_Beginning_Of_Second_Line 0xC0
+#define LCD_Start_At_Beginning_Of_Third_Line 0x90
+#define LCD_Start_At_Beginning_Of_Fourth_Line 0xD0
+#define LCD_Two_Lines_5_7_Matrix 0x38
+#define Data_Shift   4
 
-void wait_ms(uint32_t time);
-void LCD_Init(void);
-void LCD_Clear_Screen(void);
-void LCD_Send_Command(uint16_t command);
-void LCD_Send_Character(uint16_t character);
-void LCD_Send_String(const char* string);
-void LCD_Kick(void);
-void LCD_Check_Is_Busy(void);
-void LCD_gotoXY(uint8_t line, uint8_t position);
-void LCD_Display_Number(int Number);
-void LCD_Display_Real_Number(float Number);
-void LCD_SEND_A_Command_4mode(unsigned char command);
-
+extern void LCD_Send_Command (unsigned char CMD,int index);
+extern void LCD_Send_A_Character (char data,int index);
+extern void LCD_Send_A_String(char* str,int index);
+extern void LCD_Init();
+extern void LCD_Clear_Screen(int index);
+extern void LCD_Goto_XY(unsigned char line,unsigned char position,int index);
+extern void LCD_Display_Number(int Number);
+extern void LCD_Diplay_Real_Number(double Number);
+extern void wait_ms(uint32_t time);
 
 #endif /* LCD_H_ */

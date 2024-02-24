@@ -1,8 +1,7 @@
 /*
  * I2C_Slave_EEPROM.c
  *
- *  Created on: Dec 18, 2023
- *      Author: Dell
+ *  ENG.TERA
  */
 #include "I2C_Slave_EEPROM.h"
 

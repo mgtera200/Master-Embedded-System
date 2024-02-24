@@ -12,11 +12,13 @@ RM := rm -rf
 -include Startup/subdir.mk
 -include Src/subdir.mk
 -include STM32F103C6_DRIVERS/USART/subdir.mk
+-include STM32F103C6_DRIVERS/TIMER/subdir.mk
 -include STM32F103C6_DRIVERS/SPI/subdir.mk
 -include STM32F103C6_DRIVERS/RCC\ (\ DEMO\ )/subdir.mk
 -include STM32F103C6_DRIVERS/I2C/subdir.mk
 -include STM32F103C6_DRIVERS/GPIO/subdir.mk
 -include STM32F103C6_DRIVERS/EXTI/subdir.mk
+-include HAL/SERVO_MOTOR/subdir.mk
 -include HAL/LCD/subdir.mk
 -include HAL/KEYPAD/subdir.mk
 -include HAL/I2C_Slave_EEPROM/subdir.mk
@@ -59,8 +61,8 @@ all:
 main-build: Drivers1.elf secondary-outputs
 
 # Tool invocations
-Drivers1.elf: $(OBJS) $(USER_OBJS) F:\Mostafa\Drivers\Drivers\STM32F103C6TX_FLASH.ld
-	arm-none-eabi-gcc  -gdwarf-2 -o "Drivers1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"F:\Mostafa\Drivers\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers1.map" -Wl,--gc-sections -static -L"F:\Mostafa\Drivers\Drivers\HAL\inc" -L"F:\Mostafa\Drivers\Drivers\STM32F103C6_DRIVERS\inc" -L"F:\Mostafa\Drivers\Drivers\Inc" -L"F:\Mostafa\Drivers\Drivers\TERA_RTOS\RTOS_inc" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Drivers1.elf: $(OBJS) $(USER_OBJS) F:\Mostafa\Embedded\ Course\Master-Embedded-System\[Unit.8]\ MCU\ Interfacing\STM32_USART_DRIVER\STM_IDE_Project\STM32F103C6TX_FLASH.ld
+	arm-none-eabi-gcc  -gdwarf-2 -o "Drivers1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"F:\Mostafa\Embedded Course\Master-Embedded-System\[Unit.8] MCU Interfacing\STM32_USART_DRIVER\STM_IDE_Project\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers1.map" -Wl,--gc-sections -static -L"F:\Mostafa\Embedded Course\Master-Embedded-System\[Unit.8] MCU Interfacing\STM32_USART_DRIVER\STM_IDE_Project\HAL\inc" -L"F:\Mostafa\Embedded Course\Master-Embedded-System\[Unit.8] MCU Interfacing\STM32_USART_DRIVER\STM_IDE_Project\STM32F103C6_DRIVERS\inc" -L"F:\Mostafa\Embedded Course\Master-Embedded-System\[Unit.8] MCU Interfacing\STM32_USART_DRIVER\STM_IDE_Project\TERA_RTOS\RTOS_inc" -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

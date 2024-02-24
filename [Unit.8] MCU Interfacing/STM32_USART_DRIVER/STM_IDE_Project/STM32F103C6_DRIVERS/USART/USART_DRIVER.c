@@ -21,7 +21,7 @@
 uint8_t TX_flag1 =0;
 uint8_t RX_flag2 =0;
 uint8_t TC_flag3 =0;
-USART_Config_t * Global_USART_Config_s = NULL;
+USART_Config_t * Global_USART_Config_s[2] = {NULL,NULL};
 
 //-----------------------------------------
 //-------<< Generic Macros >>------------
@@ -43,7 +43,18 @@ USART_Config_t * Global_USART_Config_s = NULL;
  */
 void    MCAL_USART_Init(USART_REGISTERS_t * USARTx,USART_Config_t * USART_Config_s){
 
-	Global_USART_Config_s = USART_Config_s;
+	if(USARTx == USART1)
+	{
+		Global_USART_Config_s[0] = USART_Config_s;
+		USART1_CLOCK_EN();
+
+	}
+	if(USARTx == USART2)
+	{
+		Global_USART_Config_s[1] = USART_Config_s;
+		USART2_CLOCK_EN();
+
+	}
 
 	if(USART_Config_s->Sync_EN == USART_Enable)
 	{
@@ -72,8 +83,16 @@ void    MCAL_USART_Init(USART_REGISTERS_t * USARTx,USART_Config_t * USART_Config
 
 		// 5 - Select the desired baud rate using the USART_BRR register.
 
-		USARTx->USART_BRR |= USART_BRR_Register(RCC_Get_PCLK2(),USART_Config_s->Async_Config_s.Baud_Rate);
+		if(USARTx == USART1)
+		{
 
+			USARTx->USART_BRR |= USART_BRR_Register(RCC_Get_PCLK2(),USART_Config_s->Async_Config_s.Baud_Rate);
+		}
+		if(USARTx == USART2)
+		{
+			USARTx->USART_BRR |= USART_BRR_Register(RCC_Get_PCLK1(),USART_Config_s->Async_Config_s.Baud_Rate);
+
+		}
 		// 6 - Set Parity Configurations
 
 		if(USART_Config_s->Async_Config_s.Parity.Parity_Enable == USART_Enable)
@@ -133,13 +152,27 @@ void    MCAL_USART_SendChar(USART_REGISTERS_t * USARTx,uint16_t * Buffer){
 		while(!( USARTx->USART_SR & (1<<7) ) );
 
 	}
-	if(Global_USART_Config_s->Async_Config_s.Word_Length == Nine_bits)
+	if(USARTx == USART1)
 	{
-		USARTx->USART_DR = (*Buffer  & 0x01FF );
+		if(Global_USART_Config_s[0]->Async_Config_s.Word_Length == Nine_bits)
+		{
+			USARTx->USART_DR = (*Buffer  & 0x01FF );
+		}
+		else if(Global_USART_Config_s[0]->Async_Config_s.Word_Length == Eight_bits)
+		{
+			USARTx->USART_DR = (*Buffer  & 0xFF );
+		}
 	}
-	else if(Global_USART_Config_s->Async_Config_s.Word_Length == Eight_bits)
+	else if(USARTx == USART2)
 	{
-		USARTx->USART_DR = (*Buffer  & 0xFF );
+		if(Global_USART_Config_s[1]->Async_Config_s.Word_Length == Nine_bits)
+		{
+			USARTx->USART_DR = (*Buffer  & 0x01FF );
+		}
+		else if(Global_USART_Config_s[1]->Async_Config_s.Word_Length == Eight_bits)
+		{
+			USARTx->USART_DR = (*Buffer  & 0xFF );
+		}
 	}
 
 
@@ -161,26 +194,54 @@ void MCAL_USART_ReceiveChar(USART_REGISTERS_t * USARTx,uint16_t * Buffer){
 		while(!( USARTx->USART_SR & (1<<5) ) );
 
 	}
-	if(Global_USART_Config_s->Async_Config_s.Word_Length == Nine_bits)
+	if(USARTx == USART1)
 	{
-		if(Global_USART_Config_s->Async_Config_s.Parity.Parity_Enable)
+		if(Global_USART_Config_s[0]->Async_Config_s.Word_Length == Nine_bits)
 		{
-			*Buffer = USARTx->USART_DR   & 0xFF ;
+			if(Global_USART_Config_s[0]->Async_Config_s.Parity.Parity_Enable)
+			{
+				*Buffer = USARTx->USART_DR   & 0xFF ;
+			}
+			else
+			{
+				*Buffer = USARTx->USART_DR & 0x01FF;
+			}
 		}
-		else
+		else if(Global_USART_Config_s[0]->Async_Config_s.Word_Length == Eight_bits)
 		{
-			*Buffer = USARTx->USART_DR & 0x01FF;
+			if(Global_USART_Config_s[0]->Async_Config_s.Parity.Parity_Enable)
+			{
+				*Buffer = USARTx->USART_DR   & 0x7F ;
+			}
+			else
+			{
+				*Buffer = USARTx->USART_DR & 0x0FF;
+			}
 		}
 	}
-	else if(Global_USART_Config_s->Async_Config_s.Word_Length == Eight_bits)
+	else if(USARTx == USART2)
 	{
-		if(Global_USART_Config_s->Async_Config_s.Parity.Parity_Enable)
+		if(Global_USART_Config_s[1]->Async_Config_s.Word_Length == Nine_bits)
 		{
-			*Buffer = USARTx->USART_DR   & 0x7F ;
+			if(Global_USART_Config_s[1]->Async_Config_s.Parity.Parity_Enable)
+			{
+				*Buffer = USARTx->USART_DR   & 0xFF ;
+			}
+			else
+			{
+				*Buffer = USARTx->USART_DR & 0x01FF;
+			}
 		}
-		else
+		else if(Global_USART_Config_s[1]->Async_Config_s.Word_Length == Eight_bits)
 		{
-			*Buffer = USARTx->USART_DR & 0x0FF;
+			if(Global_USART_Config_s[1]->Async_Config_s.Parity.Parity_Enable)
+			{
+				*Buffer = USARTx->USART_DR   & 0x7F ;
+			}
+			else
+			{
+				*Buffer = USARTx->USART_DR & 0x0FF;
+			}
 		}
 	}
 
@@ -252,6 +313,11 @@ void 	MCAL_USART_GPIO_Pins_Config(USART_REGISTERS_t * USARTx){
 void USART1_IRQHandler(void)
 {
 	interrupts_Bits IRQ = { ( (USART1->USART_SR) & (0b1<<5) ) >> 5 , ( (USART1->USART_SR) & (0b1<<6) ) >> 6 , ( (USART1->USART_SR) & (0b1<<7) ) >> 7};
-	Global_USART_Config_s->CallBack_FN (&IRQ);
+	Global_USART_Config_s[0]->CallBack_FN (&IRQ);
+}
+void USART2_IRQHandler(void)
+{
+	interrupts_Bits IRQ = { ( (USART2->USART_SR) & (0b1<<5) ) >> 5 , ( (USART2->USART_SR) & (0b1<<6) ) >> 6 , ( (USART2->USART_SR) & (0b1<<7) ) >> 7};
+	Global_USART_Config_s[1]->CallBack_FN (&IRQ);
 }
 

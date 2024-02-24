@@ -1,8 +1,7 @@
 /*
  * keypad.c
  *
- * Created: 11/10/2023 9:41:47 PM
- *  Author: Dell
+ * ENG.TERA
  */ 
 #include "keypad.h"
 
@@ -30,10 +29,10 @@ void keypad_init(){
 	Pin_config.Speed_Output = speed_10;
 	MCAL_GPIO_Init(GPIOB, &Pin_config);
 
-	Pin_config.Pin_Num = 8;
-	Pin_config.mode = Output_Push_pull;
-	Pin_config.Speed_Output = speed_10;
-	MCAL_GPIO_Init(GPIOB, &Pin_config);
+//	Pin_config.Pin_Num = 8;
+//	Pin_config.mode = Output_Push_pull;
+//	Pin_config.Speed_Output = speed_10;
+//	MCAL_GPIO_Init(GPIOB, &Pin_config);
 
 	 //ROWS ARE PULL-UP INPUTS
 
@@ -62,24 +61,24 @@ void keypad_init(){
 	MCAL_GPIO_WritePin(GPIOB,C0,1);
 	MCAL_GPIO_WritePin(GPIOB,C1,1);
 	MCAL_GPIO_WritePin(GPIOB,C2,1);
-	MCAL_GPIO_WritePin(GPIOB,C3,1);
+//	MCAL_GPIO_WritePin(GPIOB,C3,1);
 
 
 }
 
 char keypad_GETKEY(){
 	int keypad_rows[] = { R0, R1, R2, R3 }; //rows of the keypad
-	int keypad_Columns[] = { C0, C1, C2, C3 }; //columns
+	int keypad_Columns[] = { C0, C1, C2 }; //columns
 
 
 	int i,j;
-	for(i=0; i<4; i++)
+	for(i=0; i<3; i++)
 	{
 		//OUTPUT ARE PUSHING HIGH VOLT AS A START
 		MCAL_GPIO_WritePin(GPIOB,5,1);
 		MCAL_GPIO_WritePin(GPIOB,6,1);
 		MCAL_GPIO_WritePin(GPIOB,7,1);
-		MCAL_GPIO_WritePin(GPIOB,8,1);
+//		MCAL_GPIO_WritePin(GPIOB,8,1);
 		// COLUMN[i] is ground
 		MCAL_GPIO_WritePin(GPIOB,keypad_Columns[i],0);
 
@@ -94,48 +93,48 @@ char keypad_GETKEY(){
 
 				case 0:{
 					if(j==0)
-						return '7';
+						return '*';
 					else if(j==1)
-						return '4';
+						return '7';
 					else if(j==2)
-						return '1';
+						return '4';
 					else if(j==3)
-						return '?';
+						return '1';
 					break;
 				}
 				case 1:{
 					if(j==0)
-						return '8';
-					else if(j==1)
-						return '5';
-					else if(j==2)
-						return '2';
-					else if(j==3)
 						return '0';
+					else if(j==1)
+						return '8';
+					else if(j==2)
+						return '5';
+					else if(j==3)
+						return '2';
 					break;
 				}
 				case 2:{
 					if(j==0)
-						return '9';
+						return '#';
 					else if(j==1)
-						return '6';
+						return '9';
 					else if(j==2)
-						return '3';
+						return '6';
 					else if(j==3)
-						return '=';
+						return '3';
 					break;
 				}
-				case 3:{
-					if(j==0)
-						return '/';
-					else if(j==1)
-						return '*';
-					else if(j==2)
-						return '-';
-					else if(j==3)
-						return '+';
-					break;
-				}				
+//				case 3:{
+//					if(j==0)
+//						return '/';
+//					else if(j==1)
+//						return '*';
+//					else if(j==2)
+//						return '-';
+//					else if(j==3)
+//						return '+';
+//					break;
+//				}
 
 				}
 			}

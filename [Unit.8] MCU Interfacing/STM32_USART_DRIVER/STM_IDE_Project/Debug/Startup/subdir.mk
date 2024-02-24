@@ -15,5 +15,5 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Startup/startup_stm32f103c6tx.o: ../Startup/startup_stm32f103c6tx.s
-	arm-none-eabi-gcc  -gdwarf-2 -mcpu=cortex-m3 -g3 -c -I"F:/Mostafa/Drivers/Drivers/CMSIS_V5" -I"F:/Mostafa/Drivers/Drivers/TERA_RTOS/RTOS_inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc  -gdwarf-2 -mcpu=cortex-m3 -g3 -c -I"F:/Mostafa/Embedded Course/Master-Embedded-System/[Unit.8] MCU Interfacing/STM32_USART_DRIVER/STM_IDE_Project/CMSIS_V5" -I"F:/Mostafa/Embedded Course/Master-Embedded-System/[Unit.8] MCU Interfacing/STM32_USART_DRIVER/STM_IDE_Project/TERA_RTOS/RTOS_inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 

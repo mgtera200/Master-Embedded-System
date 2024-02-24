@@ -1,2 +1,0 @@
-This lesson i made my own MCAL GPIO driver FOR STM32F103C6 and used an old 
-lab to run it with the driver and have the same results

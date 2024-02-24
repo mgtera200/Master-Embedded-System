@@ -1,4 +1,0 @@
-And Write A embedded C Code
- To toggle 3 Led on sequential way
- Then start a tick(pulse) by Buzzer then
- Rerun again

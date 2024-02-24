@@ -1,2 +1,0 @@
-This task is to configure port D pin 0 as input
-to open buzzer while pullying logic 1

@@ -1,6 +1,6 @@
 - ### ** To View the Explanation Video Press [here]()**
 
-![Capture](https://github.com/mgtera200/Master-Embedded-System/blob/main/%5BUnit.11%5D%20Smart.Private.Vehicle.Parking_Project/Project_Simulation/Project.png)
+![Capture](https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5BUnit.11%5D%20Smart.Private.Vehicle.Parking_Project/Project_Simulation/Project.png)
 
 # Description:
 

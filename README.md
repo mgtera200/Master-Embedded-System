@@ -27,4 +27,4 @@
 
 This repository houses drivers, projects, and labs meticulously crafted during my pursuit of the Learn-In-Depth diploma. The Learn-In-Depth diploma program is dedicated to the mastery of embedded systems from foundational principles, offering a comprehensive curriculum and practical exercises designed to foster deep understanding and expertise.
 
-For further details regarding the Learn-In-Depth diploma program, please visit [Learn-In-Depth website](#https://www.learn-in-depth-store.com/).
+For further details regarding the Learn-In-Depth diploma program, please visit [Learn-In-Depth website](https://www.learn-in-depth-store.com/).

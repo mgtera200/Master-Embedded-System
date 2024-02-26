@@ -23,21 +23,8 @@
 
 ---
 
-## Description:
+## Description
 
-This repository is structured into distinct units, each signifying a dedicated learning phase. Within each unit, I have acquired new knowledge and skills, documented through practical laboratory exercises and projects. These labs and projects serve to showcase my progression and encompass the relevant Drivers and Simulation results.
+This repository houses drivers, projects, and labs meticulously crafted during my pursuit of the Learn-In-Depth diploma. The Learn-In-Depth diploma program is dedicated to the mastery of embedded systems from foundational principles, offering a comprehensive curriculum and practical exercises designed to foster deep understanding and expertise.
 
----
-
-## Final Outputs
-
-+ ## Drivers:
-
-	* **STM32F103C6:**
-		1. GPIO
-		2. EXTI
-		3. USART
-		4. SPI
-		5. I2C
-
-	* **ATmega32**:
+For further details regarding the Learn-In-Depth diploma program, please visit [Learn-In-Depth website](#https://www.learn-in-depth-store.com/).

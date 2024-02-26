@@ -1,0 +1,8 @@
+Scheduler.c:34:6:OS_SVC_services	24	static
+Scheduler.c:54:6:PendSV_Handler	4	static
+Scheduler.c:59:6:OS_SVC_Set	16	static,ignoring_inline_asm
+Scheduler.c:78:6:teraRTOS_CreateMSP	4	static
+Scheduler.c:88:6:idle_Task_fun	4	static,ignoring_inline_asm
+Scheduler.c:96:21:TERA_RTOS_init	16	static
+Scheduler.c:129:6:teraRTOS_Create_TaskStack	24	static
+Scheduler.c:179:21:teraRTOS_CreateTask	24	static

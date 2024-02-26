@@ -1,0 +1,4 @@
+MCAL/UART/UART.d MCAL/UART/UART.o: ../MCAL/UART/UART.c \
+ ../MCAL/Includes/ATMEGA32.h
+
+../MCAL/Includes/ATMEGA32.h:

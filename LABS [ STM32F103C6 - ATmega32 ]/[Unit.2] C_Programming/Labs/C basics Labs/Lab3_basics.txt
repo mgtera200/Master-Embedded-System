@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+	int a, b;
+	int minimum;
+	printf("Enter two numbers:");
+	fflush (stdin);
+	fflush (stdout);
+	scanf("%d %d", &a, &b);
+	minimum = (a<b)?a:b;
+	printf("the minimum is %d", minimum);
+}

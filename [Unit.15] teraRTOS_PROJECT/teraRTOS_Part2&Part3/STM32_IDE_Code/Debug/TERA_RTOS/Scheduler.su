@@ -1,0 +1,14 @@
+Scheduler.c:40:6:BubbleSort	16	static
+Scheduler.c:68:6:teraRTOS_Update_SchedulerTable	24	static
+Scheduler.c:122:6:Decide_WhatNext	8	static
+Scheduler.c:146:6:OS_SVC_services	24	static
+Scheduler.c:180:28:PendSV_Handler	0	static,ignoring_inline_asm
+Scheduler.c:243:6:teraRTOS_CreateMSP	4	static
+Scheduler.c:254:6:idle_Task_fun	4	static,ignoring_inline_asm
+Scheduler.c:263:21:TERA_RTOS_init	16	static
+Scheduler.c:296:6:teraRTOS_Create_TaskStack	24	static
+Scheduler.c:346:21:teraRTOS_CreateTask	24	static
+Scheduler.c:384:6:teraRTOS_OS_SVC_Set	16	static,ignoring_inline_asm
+Scheduler.c:409:21:teraRTOS_ActivateTask	24	static
+Scheduler.c:422:21:teraRTOS_TerminateTask	24	static
+Scheduler.c:436:6:teraRTOS_START	8	static,ignoring_inline_asm

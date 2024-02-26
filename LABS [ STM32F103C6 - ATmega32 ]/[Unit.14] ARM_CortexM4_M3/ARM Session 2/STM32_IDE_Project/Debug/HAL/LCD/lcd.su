@@ -1,0 +1,10 @@
+lcd.c:12:6:LCD_Kick	8	static
+lcd.c:19:6:LCD_GPIO_init	8	static
+lcd.c:86:6:LCD_Check_Is_Busy	8	static
+lcd.c:132:6:LCD_Send_Command	16	static
+lcd.c:142:6:LCD_Send_Character	16	static
+lcd.c:152:6:LCD_Clear_Screen	8	static
+lcd.c:157:6:LCD_Init	8	static
+lcd.c:168:6:LCD_Send_String	24	static
+lcd.c:191:6:LCD_Display_Number	40	static
+lcd.c:198:6:LCD_Display_Real_Number	48	static

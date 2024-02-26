@@ -1,0 +1,1 @@
+This lab i run CAN on normal mode and implemented interrupts to send and receive

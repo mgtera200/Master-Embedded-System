@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="ATMEGA32.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>32768</length>                 
+      <used>10879</used>                     
+      <free>21889</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>2048</length>                 
+      <used>14</used>                     
+      <free>2034</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

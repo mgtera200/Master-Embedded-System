@@ -1,8 +1,0 @@
-lcd_me.c:14:6:wait_ms	24	static
-lcd_me.c:22:6:LCD_Kick	16	static
-lcd_me.c:28:6:LCD_Send_Command	16	static
-lcd_me.c:54:6:LCD_Init	40	static
-lcd_me.c:109:6:LCD_Send_A_Character	16	static
-lcd_me.c:135:6:LCD_Clear_Screen	16	static
-lcd_me.c:140:6:LCD_Goto_XY	16	static
-lcd_me.c:151:6:LCD_Send_A_String	24	static

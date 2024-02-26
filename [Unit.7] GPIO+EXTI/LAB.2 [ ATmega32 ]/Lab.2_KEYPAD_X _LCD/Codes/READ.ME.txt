@@ -1,0 +1,2 @@
+This lab i configured the keypad and used it
+to write on the LCD as shown in Video..

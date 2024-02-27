@@ -1,15 +1,11 @@
-- ### To View the Explanation Video Press [here](https://drive.google.com/file/d/1u61pxLey7LehtMpDT40JLqlZxcdWkLWp/view?usp=sharing)
-
-- ### To View the Report Press [here](https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20Pressure-Controlling-System%20%5D/Report%20%5B%20PDF%20%5D/REPORT.pdf)
-
-<img width="570" alt="Pressure_controller" src="https://github.com/mgtera200/Master-Embedded-System/assets/127119775/9dfe6025-fb70-49e7-82d6-243960cb22f4">
-
----
-
 # Description:
 
 A system that informs the crew of a cabin with an alarm when the pressure exceeds 20 bars in the cabin. 
 The alarm duration equals 60 seconds.
+
+- ### To View the Simulation Video Press -> [here](https://drive.google.com/file/d/1u61pxLey7LehtMpDT40JLqlZxcdWkLWp/view?usp=sharing)
+
+- ### To View the Report Press -> [here](https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20Pressure-Controlling-System%20%5D/Report%20%5B%20PDF%20%5D/REPORT.pdf)
 
 ---
 

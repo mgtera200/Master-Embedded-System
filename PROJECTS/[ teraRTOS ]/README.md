@@ -1,4 +1,4 @@
-![Capture](https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part4/MicroVision_Simulation%26debugging/SharedScreenshot.jpg)
+![Capture](https://github.com/mgtera200/Master-Embedded-System/assets/127119775/1005969a-21e4-4492-8bd4-91bbce04c108)
 
 # Description
 

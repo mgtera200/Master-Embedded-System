@@ -28,5 +28,5 @@ The alarm duration equals 60 seconds.
 
 # Microcontroller:
 
-- STM32F103C6T6.
+- STM32F103C6
 

@@ -7,11 +7,11 @@
 #### Priority Inversion
 
 <p align="center">
-  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part5/MicroVision_Simulation%26debugging/PriorityInversion.jpg" width=700>
+  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part5/MicroVision_Simulation%26debugging/PriorityInversion.jpg">
 </p>
 
 #### DeadLock
 
 <p align="center">
-  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part5/MicroVision_Simulation%26debugging/DeadLock.jpg" width=700>
+  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part5/MicroVision_Simulation%26debugging/DeadLock.jpg">
 </p>

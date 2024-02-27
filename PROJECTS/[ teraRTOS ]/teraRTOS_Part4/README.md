@@ -9,5 +9,5 @@
 ### Lab Simulation
 
 <p align="center">
-  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part4/MicroVision_Simulation%26debugging/SharedScreenshot.jpg">
+  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/PROJECTS/%5B%20teraRTOS%20%5D/teraRTOS_Part4/MicroVision_Simulation%26debugging/SharedScreenshot.jpg" width=850>
 </p>

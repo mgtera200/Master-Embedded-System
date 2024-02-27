@@ -6,6 +6,16 @@
 
 - Each part of this project contributes significant enhancements and insights, facilitating a systematic evolution of the RTOS. Through structured exploration and experimentation, this project offers invaluable learning opportunities for enthusiasts and professionals aspiring to delve into RTOS development for embedded systems.
 
+# Features
+
+- Task Context Switch/Restore
+- Tasks Queue/Buffers
+- Scheduling Algorithm 
+	- Preemptive based on priority
+	- Round-robin for tasks which have the same priority
+- Wait function to eliminate the task for a certain time (ticks)
+- Mutual Exclusion ( Mutex )
+
 
 
 

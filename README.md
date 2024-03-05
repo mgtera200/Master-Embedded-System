@@ -18,7 +18,7 @@
 ---
 # Welcome to My Embedded Systems Repository!
 
-👋 It's a pleasure to have you here.
+<p align="center">It's a pleasure to have you here.</p>
 
 ## Description
 

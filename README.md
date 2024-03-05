@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width=700>
+  <img src="https://github.com/mgtera200/Master-Embedded-System/assets/127119775/b1668140-432e-4bab-86ef-949cdcbdb2c7" width=700>
 </p>
 
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/mgtera200/Master-Embedded-System/blob/main/LABS%20%5B%20STM32F103C6%20-%20ATmega32%20%5D/(6)%20MCU_Interrupts/%E2%80%94Pngtree%E2%80%94automotive%20technology%20lines_5622610.png">
+  <img src="https://github.com/mgtera200/Master-Embedded-System/assets/127119775/6edebbc5-4b1b-4e33-bd45-7deedc19dd83">
 </p>
 
 

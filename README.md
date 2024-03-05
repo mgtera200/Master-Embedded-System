@@ -18,8 +18,6 @@
 ---
 # Welcome to My Embedded Systems Repository!
 
-<p align="center">It's a pleasure to have you here.</p>
-
 ## Description
 
 This repository houses drivers, projects, and labs meticulously crafted during my pursuit of the Learn-In-Depth diploma. The Learn-In-Depth diploma program is dedicated to the mastery of embedded systems from foundational principles, offering a comprehensive curriculum and practical exercises designed to foster deep understanding and expertise.
